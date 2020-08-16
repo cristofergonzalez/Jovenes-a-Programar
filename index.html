@@ -23,7 +23,7 @@
       display: flex;
       -ms-flex-align: center;
       align-items: center;
-      padding-top: 40px;
+      padding-top: 20px;
       padding-bottom: 40px;
       background-color: #f5f5f5;
     }
@@ -32,28 +32,61 @@
     img{
       width: 200px;
       height: 100px;
+      border-radius: 10px;
+      width: 240px;
     }
-    .entradas{
+    .signin{
+    text-align: center;
+    background-color: #d61c6c;
+    margin-right: 400px;
+    margin-left: 400px;
+    border-radius: 20px;
+    height: 300px;
+    padding-top: 40px;
+
+    }
+    .entradas input{
       display: block;
-      margin: auto;
       align-items: center;
+      margin: auto;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      
+    }
+    p{
+      text-align: center;
+      color: white;
+      font-weight: bold;
+    }
+    .boton{
+      border-radius: 5px;
     }
   </style>
+  <script>
+    function redirect(){
+      var correo=document.getElementById("email").value;
+      var contraseña=document.getElementById("password").value;
+      if (correo=="" || contraseña==""){
+        alert("El correo o la contraseña son invalidos!");
+      }else{
+        window.location.href="home.html"
+      }
+      
+    };
+  </script>
 </head>
 
 <body class="text-center">
   <div class="container p-5">
     <div class="signin">
       <div>
-          <img src="img/login.png" alt="imgLog">
-          <p>Sign In</p>
-      </div>
-      <div>
-          <form action="" class="entradas">
-              <input type="text" placeholder="Email adress" required="">
-              <input type="password" placeholder="Password" required="">
-              <input type="button" value="Sign in" onclick="location.href='Html.html'">
-          </form>
+        <img src="img/login.png" alt="imgLog">
+        <p>Please sign in</p>
+        <form action="" class="entradas">
+            <input type="email" placeholder="Email adress" id="email">
+            <input type="password" placeholder="Password" id="password">
+            <input class="boton" type="button" value="Sign In" onclick="redirect()">
+        </form>
       </div>
     </div>
   </div>
