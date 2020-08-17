@@ -15,23 +15,25 @@ function pedido(url){
      pedido(url).then(function(Obj){
          let myObj=Obj
          let contenido=""
-         for(i=0;i<4;i++){
+         for(i=0;i<myObj.length;i++){
              contenido +=`
+             <img src="`+myObj[i].imgSrc+`">
              <p>
                 `+"<span>Nombre: </span>"+ myObj[i].name+`
              </p>
-             <img src="`+myObj[i].imgSrc+`">
+             
              <p>
                 `+"<span>Descripción: </span>"+myObj[i].description+`
              </p>
              <p class="bottom">
                 `+"<span>Precio: </span>"+myObj[i].cost+`
              </p>
+             <hr>
              `
 
          }
          
-         document.getElementById("contenedor").innerHTML+= contenido;
+         document.getElementById("container").innerHTML+= contenido;
      })
      
  });
