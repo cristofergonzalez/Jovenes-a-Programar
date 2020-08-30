@@ -139,16 +139,10 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
-p{
-  text-align: justify;
-  margin:0px;
+
+#usershow{
+  color: white;
 }
-.bottom{
-  margin-bottom:20px ;
-}
-span{
-  font-weight: bold;
-}
-.contenedor{
-  font-family: sans-serif;
+.colorfondo{
+  background: linear-gradient(#ff5926, #8a0732 );
 }
